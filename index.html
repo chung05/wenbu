@@ -45,8 +45,8 @@
              =================================================================== -->
         <section class="bg-white rounded-3xl shadow-sm border border-stone-200/80 overflow-hidden">
             <div class="w-full aspect-video bg-stone-200 relative overflow-hidden">
-                <!-- [圖檔 1] 封面主視覺：main.jpg -->
-                <img id="img-cover" alt="穩步寬頭運動鞋封面主視覺" class="w-full h-full object-cover block">
+                <!-- [圖檔 1] 封面主視覺：直接讀取與 index.html 相同路徑下的 main.jpg -->
+                <img id="img-cover" src="./main.jpg" onerror="renderCoverPhoto()" alt="穩步寬頭運動鞋封面主視覺" class="w-full h-full object-cover block">
             </div>
 
             <div class="p-5 sm:p-8">
@@ -620,7 +620,11 @@
 
         // 頁面初始化執行
         window.addEventListener('DOMContentLoaded', () => {
-            renderCoverPhoto();
+            // 若首頁 main.jpg 尚未載入成功，先以備援畫面渲染，待 main.jpg 讀取後自動無縫呈現
+            const coverEl = document.getElementById('img-cover');
+            if (coverEl && !coverEl.complete) {
+                coverEl.addEventListener('error', renderCoverPhoto, { once: true });
+            }
             renderFeaturePhotos();
             renderColorPairPhoto('img-shoe-black',    { main: '#27272a', dark: '#09090b', light: '#71717a', accent: '#3f3f46', isPurple: false });
             renderColorPairPhoto('img-shoe-grey',     { main: '#525866', dark: '#333842', light: '#94a3b8', accent: '#64748b', isPurple: false });
