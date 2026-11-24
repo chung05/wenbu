@@ -40,85 +40,18 @@
     <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 space-y-8">
 
         <!-- ===================================================================
-             【區塊一】1920x1080 封面主視覺與精簡專案名稱
-             👉 對應圖檔名稱：main.jpg
-             =================================================================== -->
-        <section class="bg-white rounded-3xl shadow-sm border border-stone-200/80 overflow-hidden">
-            <div class="w-full aspect-video bg-stone-200 relative overflow-hidden">
-                <!-- [圖檔 1] 封面主視覺：直接讀取與 index.html 相同路徑下的 main.jpg -->
-                <img id="img-cover" src="./main.jpg" onerror="renderCoverPhoto()" alt="穩步寬頭運動鞋封面主視覺" class="w-full h-full object-cover block">
-            </div>
-
-            <div class="p-6 sm:p-8 lg:p-10">
-                <div class="flex flex-wrap items-center gap-2.5 text-xs sm:text-sm text-stone-500 mb-3">
-                    <span class="bg-teal-50 text-teal-800 border border-teal-200 font-bold px-3 py-0.5 rounded-full">日常機能鞋履</span>
-                    <span>提案團隊：<strong>穩步生活設計團隊 SteadyWalk Lab</strong></span>
-                </div>
-                <!-- 精簡版主標題 -->
-                <h1 class="text-2xl sm:text-3xl lg:text-4xl font-black text-stone-900 leading-snug mb-3.5">
-                    【穩步寬頭運動鞋】寬頭不擠腳 × 免綁一拉即穿
-                </h1>
-                <p class="text-sm sm:text-base lg:text-lg text-stone-600 leading-relaxed max-w-4xl">
-                    專為台灣偏寬腳型與久站生活打造！將<strong>「加寬透氣鞋頭」</strong>與<strong>「三層立體支撐鞋墊」</strong>結合，五根腳趾自由伸展、足弓穩穩有支撐，走一整天依然踏實輕鬆。
-                </p>
-            </div>
-        </section>
-
-        <!-- ===================================================================
-             【區塊二】解決四大穿鞋痛點（電腦版四欄並排／手機版單欄）
-             =================================================================== -->
-        <section class="bg-white rounded-3xl shadow-sm border border-stone-200/80 p-6 sm:p-8 lg:p-10">
-            <h2 class="text-xl sm:text-2xl font-black text-stone-900 mb-1.5">這雙鞋為你解決的 4 個日常煩惱</h2>
-            <p class="text-xs sm:text-sm text-stone-500 mb-6">針對台灣服務業、通勤族與銀髮長輩實際穿鞋需求設計</p>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="bg-[#faf8f5] p-5 rounded-2xl border border-stone-200/80 flex flex-col gap-2.5">
-                    <span class="w-8 h-8 rounded-full bg-teal-700 text-white font-black text-sm flex items-center justify-center shrink-0">1</span>
-                    <div>
-                        <h3 class="font-bold text-stone-900 text-base mb-1.5">腳板偏寬、走久就磨腳</h3>
-                        <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">一般窄頭鞋走不到半小時，小拇指與腳掌兩側就被勒得又紅又痛。</p>
-                    </div>
-                </div>
-
-                <div class="bg-[#faf8f5] p-5 rounded-2xl border border-stone-200/80 flex flex-col gap-2.5">
-                    <span class="w-8 h-8 rounded-full bg-teal-700 text-white font-black text-sm flex items-center justify-center shrink-0">2</span>
-                    <div>
-                        <h3 class="font-bold text-stone-900 text-base mb-1.5">買大一號卻一直掉跟</h3>
-                        <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">為了讓腳趾舒服買大半號，結果走路後腳跟空蕩蕩、容易磨破皮。</p>
-                    </div>
-                </div>
-
-                <div class="bg-[#faf8f5] p-5 rounded-2xl border border-stone-200/80 flex flex-col gap-2.5">
-                    <span class="w-8 h-8 rounded-full bg-teal-700 text-white font-black text-sm flex items-center justify-center shrink-0">3</span>
-                    <div>
-                        <h3 class="font-bold text-stone-900 text-base mb-1.5">站一整天腳底又痠又麻</h3>
-                        <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">一般平底鞋踩久容易軟塌，缺乏足弓支撐導致腳底板壓力集中。</p>
-                    </div>
-                </div>
-
-                <div class="bg-[#faf8f5] p-5 rounded-2xl border border-stone-200/80 flex flex-col gap-2.5">
-                    <span class="w-8 h-8 rounded-full bg-teal-700 text-white font-black text-sm flex items-center justify-center shrink-0">4</span>
-                    <div>
-                        <h3 class="font-bold text-stone-900 text-base mb-1.5">出門趕時間不想彎腰綁鞋帶</h3>
-                        <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">手提重物或長輩彎腰不便，傳統鞋帶鬆脫也容易造成絆倒風險。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===================================================================
-             【區塊三】四大核心工藝與實拍細節
+             【區塊三】四大核心舒適工藝與實拍細節
              👉 對應圖檔名稱：
                 - 設計 01（加寬鞋頭）：5B7D9F79-E144-4167-8E11-6BA5813DCA7B.jpg
                 - 設計 02（三層鞋墊）：F8AD509D-9748-4AC0-A8E7-A4F855C02B96.jpg
                 - 設計 02（足弓支撐）：5F9C63FE-DF02-45D9-A3B1-BB37AB097943.jpg
-                - 設計 03（後跟快調）：58BC86A1-BB4F-426A-940C-1F880256B158.jpg
-                - 設計 04（防滑大底）：7BD0C0F0-CCE4-41F4-9FF3-4194489E2562.jpg
+                - 設計 03（快調透氣）：58BC86A1-BB4F-426A-940C-1F880256B158.jpg
+                - 設計 04（後跟大底）：7BD0C0F0-CCE4-41F4-9FF3-4194489E2562.jpg
              =================================================================== -->
         <section class="bg-white rounded-3xl shadow-sm border border-stone-200/80 p-6 sm:p-8 lg:p-10 space-y-6">
             <div>
-                <h2 class="text-xl sm:text-2xl font-black text-stone-900 mb-1.5">四大好穿細節設計</h2>
-                <p class="text-xs sm:text-sm text-stone-500">從鞋頭寬度、足弓鞋墊到防滑大底，每處細節都為久走考量</p>
+                <h2 class="text-xl sm:text-2xl font-black text-stone-900 mb-1.5">四大核心舒適工藝</h2>
+                <p class="text-xs sm:text-sm text-stone-500">從鞋頭寬度、足弓支撐到透氣鞋面與防滑大底，每處細節都為久走考量</p>
             </div>
 
             <!-- 設計 01：鞋頭加寬設計（電腦版左文右圖寬幅展示） -->
@@ -142,10 +75,10 @@
             <div class="bg-[#faf8f5] p-5 sm:p-6 rounded-2xl border border-stone-200">
                 <div class="flex items-center gap-2 mb-2">
                     <span class="bg-amber-500 text-stone-900 text-xs font-black px-2.5 py-0.5 rounded">02</span>
-                    <h3 class="font-black text-lg sm:text-xl text-stone-900">每雙配置「三層立體支撐鞋墊」</h3>
+                    <h3 class="font-black text-lg sm:text-xl text-stone-900">三層立體支撐鞋墊，分散久站足底壓力</h3>
                 </div>
                 <p class="text-sm sm:text-base text-stone-600 mb-4">
-                    透氣緩衝 PU 上層 ＋ 硬挺 TPU 足弓支撐片 ＋ 前後避震 GEL 矽膠，分散足底壓力、久站不累。
+                    透氣緩衝 PU 上層 ＋ 硬挺 TPU 足弓支撐片 ＋ 前後避震 GEL 矽膠，完整承托足弓弧度、久站不累。
                 </p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div class="h-72 sm:h-80 rounded-xl overflow-hidden border border-stone-200 bg-white relative">
@@ -159,29 +92,29 @@
                 </div>
             </div>
 
-            <!-- 設計 03 & 04：加厚緩震後跟免綁扣 × 超輕耐磨防滑大底 -->
+            <!-- 設計 03 & 04：免綁快調扣 × 透氣飛織網布 / 加厚緩震後跟 × 超輕耐磨防滑大底 -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div class="bg-[#faf8f5] p-5 rounded-2xl border border-stone-200">
                     <div class="flex items-center gap-2 mb-1.5">
                         <span class="bg-stone-800 text-white text-xs font-black px-2.5 py-0.5 rounded">03</span>
-                        <h3 class="font-black text-base sm:text-lg text-stone-900">加厚緩震後跟 × 免綁快調扣</h3>
+                        <h3 class="font-black text-base sm:text-lg text-stone-900">免綁快調扣 × 透氣飛織網布</h3>
                     </div>
-                    <p class="text-xs sm:text-sm text-stone-600 mb-3.5">U 型跟杯柔軟包覆腳踝不掉跟，彈性鞋帶一拉即穿。</p>
+                    <p class="text-xs sm:text-sm text-stone-600 mb-3.5">彈性鞋帶一拉即穿不彎腰，搭配高透氣網眼鞋面，全天乾爽不悶熱。</p>
                     <div class="h-72 rounded-xl overflow-hidden border border-stone-200 bg-white relative">
-                        <!-- [圖檔 5] 後跟快調扣：58BC86A1-BB4F-426A-940C-1F880256B158.jpg -->
-                        <img id="img-lace" alt="加厚緩震後跟與免綁快調扣特寫" class="w-full h-full object-cover block">
+                        <!-- [圖檔 5] 快調透氣鞋面：58BC86A1-BB4F-426A-940C-1F880256B158.jpg -->
+                        <img id="img-lace" alt="免綁快調扣與透氣飛織網布特寫" class="w-full h-full object-cover block">
                     </div>
                 </div>
 
                 <div class="bg-[#faf8f5] p-5 rounded-2xl border border-stone-200">
                     <div class="flex items-center gap-2 mb-1.5">
                         <span class="bg-stone-800 text-white text-xs font-black px-2.5 py-0.5 rounded">04</span>
-                        <h3 class="font-black text-base sm:text-lg text-stone-900">超輕耐磨多紋路防滑大底</h3>
+                        <h3 class="font-black text-base sm:text-lg text-stone-900">加厚緩震後跟 × 超輕耐磨防滑大底</h3>
                     </div>
-                    <p class="text-xs sm:text-sm text-stone-600 mb-3.5">前後掌高耐磨橡膠片加強抓地力，日常濕滑路面更安心。</p>
+                    <p class="text-xs sm:text-sm text-stone-600 mb-3.5">U 型跟杯柔軟包覆不掉跟，結合前後掌高耐磨防滑橡膠片，每步都穩固。</p>
                     <div class="h-72 rounded-xl overflow-hidden border border-stone-200 bg-white relative">
-                        <!-- [圖檔 6] 防滑大底：7BD0C0F0-CCE4-41F4-9FF3-4194489E2562.jpg -->
-                        <img id="img-heel" alt="超輕耐磨防滑大底特寫" class="w-full h-full object-cover block">
+                        <!-- [圖檔 6] 後跟與防滑大底：7BD0C0F0-CCE4-41F4-9FF3-4194489E2562.jpg -->
+                        <img id="img-heel" alt="加厚緩震後跟與超輕耐磨防滑大底特寫" class="w-full h-full object-cover block">
                     </div>
                 </div>
             </div>
@@ -316,219 +249,6 @@
                         <span class="text-teal-700 font-black block mb-1">2027 / 02 月起</span>
                         <span class="font-bold text-stone-800 block">依訂單陸續出貨</span>
                         <span class="text-stone-500 text-xs">台灣本島宅配與超取</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===================================================================
-             【區塊三】四大核心工藝與實拍細節
-             👉 對應圖檔名稱：
-                - 設計 01（加寬鞋頭）：5B7D9F79-E144-4167-8E11-6BA5813DCA7B.jpg
-                - 設計 02（三層鞋墊）：F8AD509D-9748-4AC0-A8E7-A4F855C02B96.jpg
-                - 設計 02（足弓支撐）：5F9C63FE-DF02-45D9-A3B1-BB37AB097943.jpg
-                - 設計 03（後跟快調）：58BC86A1-BB4F-426A-940C-1F880256B158.jpg
-                - 設計 04（防滑大底）：7BD0C0F0-CCE4-41F4-9FF3-4194489E2562.jpg
-             =================================================================== -->
-        <section class="bg-white rounded-3xl shadow-sm border border-stone-200/80 p-5 sm:p-8 space-y-6">
-            <div>
-                <h2 class="text-lg sm:text-xl font-black text-stone-900 mb-1">四大好穿細節設計</h2>
-                <p class="text-xs sm:text-sm text-stone-500">從鞋頭寬度、足弓鞋墊到防滑大底，每處細節都為久走考量</p>
-            </div>
-
-            <!-- 設計 01：鞋頭加寬設計 -->
-            <div class="bg-[#faf8f5] p-4 sm:p-5 rounded-2xl border border-stone-200">
-                <div class="flex items-center gap-2 mb-1.5">
-                    <span class="bg-teal-700 text-white text-xs font-black px-2 py-0.5 rounded">01</span>
-                    <h3 class="font-black text-base sm:text-lg text-stone-900">鞋頭加寬設計，五根腳趾自由伸展</h3>
-                </div>
-                <p class="text-xs sm:text-sm text-stone-600 mb-3.5">
-                    專為亞洲寬腳型加大前掌透氣空間，不擠壓腳趾；下午雙腳微腫或搭配厚襪依然寬鬆自在。
-                </p>
-                <div class="h-64 sm:h-72 rounded-xl overflow-hidden border border-stone-200 bg-white relative">
-                    <!-- [圖檔 2] 加寬鞋頭：5B7D9F79-E144-4167-8E11-6BA5813DCA7B.jpg -->
-                    <img id="img-widetoe" alt="加寬鞋頭設計與寬頭鞋墊對比圖" class="w-full h-full object-cover block">
-                </div>
-            </div>
-
-            <!-- 設計 02：三層立體支撐鞋墊 -->
-            <div class="bg-[#faf8f5] p-4 sm:p-5 rounded-2xl border border-stone-200">
-                <div class="flex items-center gap-2 mb-1.5">
-                    <span class="bg-amber-500 text-stone-900 text-xs font-black px-2 py-0.5 rounded">02</span>
-                    <h3 class="font-black text-base sm:text-lg text-stone-900">每雙配置「三層立體支撐鞋墊」</h3>
-                </div>
-                <p class="text-xs sm:text-sm text-stone-600 mb-3.5">
-                    透氣緩衝 PU 上層 ＋ 硬挺 TPU 足弓支撐片 ＋ 前後避震 GEL 矽膠，分散足底壓力、久站不累。
-                </p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-                    <div class="h-64 rounded-xl overflow-hidden border border-stone-200 bg-white relative">
-                        <!-- [圖檔 3] 三層鞋墊分解：F8AD509D-9748-4AC0-A8E7-A4F855C02B96.jpg -->
-                        <img id="img-insole-layers" alt="PU+GEL+TPU 三層支撐鞋墊結構分解圖" class="w-full h-full object-cover block">
-                    </div>
-                    <div class="h-64 rounded-xl overflow-hidden border border-stone-200 bg-white relative">
-                        <!-- [圖檔 4] 足弓支撐力學：5F9C63FE-DF02-45D9-A3B1-BB37AB097943.jpg -->
-                        <img id="img-insole-arch" alt="足弓 A-B-C 三點立體支撐示意圖" class="w-full h-full object-cover block">
-                    </div>
-                </div>
-            </div>
-
-            <!-- 設計 03 & 04：加厚緩震後跟免綁扣 × 超輕耐磨防滑大底 -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div class="bg-[#faf8f5] p-4 rounded-2xl border border-stone-200">
-                    <div class="flex items-center gap-2 mb-1">
-                        <span class="bg-stone-800 text-white text-xs font-black px-2 py-0.5 rounded">03</span>
-                        <h3 class="font-black text-sm sm:text-base text-stone-900">加厚緩震後跟 × 免綁快調扣</h3>
-                    </div>
-                    <p class="text-xs text-stone-600 mb-3">U 型跟杯柔軟包覆腳踝不掉跟，彈性鞋帶一拉即穿。</p>
-                    <div class="h-60 rounded-xl overflow-hidden border border-stone-200 bg-white relative">
-                        <!-- [圖檔 5] 後跟快調扣：58BC86A1-BB4F-426A-940C-1F880256B158.jpg -->
-                        <img id="img-lace" alt="加厚緩震後跟與免綁快調扣特寫" class="w-full h-full object-cover block">
-                    </div>
-                </div>
-
-                <div class="bg-[#faf8f5] p-4 rounded-2xl border border-stone-200">
-                    <div class="flex items-center gap-2 mb-1">
-                        <span class="bg-stone-800 text-white text-xs font-black px-2 py-0.5 rounded">04</span>
-                        <h3 class="font-black text-sm sm:text-base text-stone-900">超輕耐磨多紋路防滑大底</h3>
-                    </div>
-                    <p class="text-xs text-stone-600 mb-3">前後掌高耐磨橡膠片加強抓地力，日常濕滑路面更安心。</p>
-                    <div class="h-60 rounded-xl overflow-hidden border border-stone-200 bg-white relative">
-                        <!-- [圖檔 6] 防滑大底：7BD0C0F0-CCE4-41F4-9FF3-4194489E2562.jpg -->
-                        <img id="img-heel" alt="超輕耐磨防滑大底特寫" class="w-full h-full object-cover block">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===================================================================
-             【區塊四】五種百搭配色與尺碼規格
-             👉 對應圖檔名稱：
-                - 極簡黑：image_92a102.jpg
-                - 質感灰：image_3d553a.jpg
-                - 典雅棗紅：image_f56ba8.jpg
-                - 櫻花粉紅：image_a59a1a.jpg
-                - 尊爵紫：image_d037b8.jpg
-             =================================================================== -->
-        <section class="bg-white rounded-3xl shadow-sm border border-stone-200/80 p-5 sm:p-8">
-            <h2 class="text-lg sm:text-xl font-black text-stone-900 mb-1">全系列五種百搭配色</h2>
-            <p class="text-xs sm:text-sm text-stone-500 mb-5">提供男、女完整尺碼選擇，滿足上班通勤、休閒散步與孝親送禮</p>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                <!-- 1. 極簡黑 -->
-                <div class="bg-[#faf8f5] rounded-2xl border border-stone-200 overflow-hidden">
-                    <div class="aspect-square bg-white overflow-hidden">
-                        <!-- [圖檔 7] 極簡黑：image_92a102.jpg -->
-                        <img id="img-shoe-black" alt="極簡黑款式實拍" class="w-full h-full object-cover block">
-                    </div>
-                    <div class="p-3.5">
-                        <div class="flex items-center justify-between mb-1">
-                            <span class="font-black text-stone-900 text-sm">極簡黑</span>
-                            <span class="text-[11px] bg-stone-200 text-stone-700 font-bold px-2 py-0.5 rounded">36 - 46 碼</span>
-                        </div>
-                        <p class="text-xs text-stone-500">免綁帶快調扣｜耐髒百搭首選</p>
-                    </div>
-                </div>
-
-                <!-- 2. 質感灰 -->
-                <div class="bg-[#faf8f5] rounded-2xl border border-stone-200 overflow-hidden">
-                    <div class="aspect-square bg-white overflow-hidden">
-                        <!-- [圖檔 8] 質感灰：image_3d553a.jpg -->
-                        <img id="img-shoe-grey" alt="質感灰款式實拍" class="w-full h-full object-cover block">
-                    </div>
-                    <div class="p-3.5">
-                        <div class="flex items-center justify-between mb-1">
-                            <span class="font-black text-stone-900 text-sm">質感灰</span>
-                            <span class="text-[11px] bg-stone-200 text-stone-700 font-bold px-2 py-0.5 rounded">36 - 46 碼</span>
-                        </div>
-                        <p class="text-xs text-stone-500">免綁帶快調扣｜休閒俐落質感</p>
-                    </div>
-                </div>
-
-                <!-- 3. 典雅棗紅 -->
-                <div class="bg-[#faf8f5] rounded-2xl border border-stone-200 overflow-hidden">
-                    <div class="aspect-square bg-white overflow-hidden">
-                        <!-- [圖檔 9] 典雅棗紅：image_f56ba8.jpg -->
-                        <img id="img-shoe-burgundy" alt="典雅棗紅款式實拍" class="w-full h-full object-cover block">
-                    </div>
-                    <div class="p-3.5">
-                        <div class="flex items-center justify-between mb-1">
-                            <span class="font-black text-stone-900 text-sm">典雅棗紅</span>
-                            <span class="text-[11px] bg-rose-100 text-rose-800 font-bold px-2 py-0.5 rounded">36 - 42 碼</span>
-                        </div>
-                        <p class="text-xs text-stone-500">免綁帶快調扣｜低調襯膚顯白</p>
-                    </div>
-                </div>
-
-                <!-- 4. 櫻花粉紅 -->
-                <div class="bg-[#faf8f5] rounded-2xl border border-stone-200 overflow-hidden">
-                    <div class="aspect-square bg-white overflow-hidden">
-                        <!-- [圖檔 10] 櫻花粉紅：image_a59a1a.jpg -->
-                        <img id="img-shoe-pink" alt="櫻花粉紅款式實拍" class="w-full h-full object-cover block">
-                    </div>
-                    <div class="p-3.5">
-                        <div class="flex items-center justify-between mb-1">
-                            <span class="font-black text-stone-900 text-sm">櫻花粉紅</span>
-                            <span class="text-[11px] bg-purple-100 text-purple-800 font-bold px-2 py-0.5 rounded">36 - 42 碼</span>
-                        </div>
-                        <p class="text-xs text-stone-500">免綁帶快調扣｜清新粉紫丁香</p>
-                    </div>
-                </div>
-
-                <!-- 5. 尊爵紫 -->
-                <div class="bg-[#faf8f5] rounded-2xl border border-stone-200 overflow-hidden sm:col-span-2 lg:col-span-2">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 h-full">
-                        <div class="aspect-square sm:aspect-auto bg-white overflow-hidden">
-                            <!-- [圖檔 11] 尊爵紫：image_d037b8.jpg -->
-                            <img id="img-shoe-purple" alt="尊爵紫款式實拍" class="w-full h-full object-cover block">
-                        </div>
-                        <div class="p-4 flex flex-col justify-center">
-                            <div class="flex items-center gap-2 mb-1.5">
-                                <span class="font-black text-stone-900 text-base">尊爵紫（經典扁平鞋帶款）</span>
-                                <span class="text-[11px] bg-fuchsia-100 text-fuchsia-800 font-bold px-2 py-0.5 rounded">36 - 42 碼</span>
-                            </div>
-                            <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
-                                採用黑紫雙色立體交織網布，搭配流線銀標與經典編織扁平鞋帶，包覆感更紮實穩固。
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===================================================================
-             【區塊五】專案計畫（計畫故事、執行時程與售後承諾）
-             =================================================================== -->
-        <section class="bg-white rounded-3xl shadow-sm border border-stone-200/80 p-5 sm:p-8 space-y-6">
-            <div>
-                <h2 class="text-lg sm:text-xl font-black text-stone-900 mb-2">計畫故事與專案時程</h2>
-                <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
-                    我們在訪談超過 200 位台灣服務業夥伴、護理人員與銀髮長輩後發現，大家選鞋最常陷入兩難：一般運動鞋鞋頭太窄容易擠腳趾，而市面上的寬頭鞋往往鞋底太軟、久站足弓容易痠麻。因此我們決定將「加寬透氣鞋頭」與「三層立體支撐鞋墊」合而為一，打造出每天出門都踩得穩固輕鬆的日常鞋履。
-                </p>
-            </div>
-
-            <!-- 執行時程表 -->
-            <div class="bg-[#faf8f5] p-4 sm:p-5 rounded-2xl border border-stone-200">
-                <h3 class="font-bold text-stone-900 text-sm sm:text-base mb-3">專案執行與出貨時程</h3>
-                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
-                    <div class="bg-white p-3 rounded-xl border border-stone-200/80">
-                        <span class="text-teal-700 font-black block mb-1">2026 / 11 月</span>
-                        <span class="font-bold text-stone-800 block">全尺碼打樣實測</span>
-                        <span class="text-stone-500 text-[11px]">鞋頭寬度與鞋墊定案</span>
-                    </div>
-                    <div class="bg-white p-3 rounded-xl border border-stone-200/80">
-                        <span class="text-teal-700 font-black block mb-1">2026 / 12 月</span>
-                        <span class="font-bold text-stone-800 block">嘖嘖募資啟動</span>
-                        <span class="text-stone-500 text-[11px]">開放預購與尺碼統計</span>
-                    </div>
-                    <div class="bg-white p-3 rounded-xl border border-stone-200/80">
-                        <span class="text-teal-700 font-black block mb-1">2027 / 01 月</span>
-                        <span class="font-bold text-stone-800 block">正式量產與品管</span>
-                        <span class="text-stone-500 text-[11px]">人工逐雙檢驗鞋身鞋墊</span>
-                    </div>
-                    <div class="bg-white p-3 rounded-xl border border-stone-200/80">
-                        <span class="text-teal-700 font-black block mb-1">2027 / 02 月起</span>
-                        <span class="font-bold text-stone-800 block">依訂單陸續出貨</span>
-                        <span class="text-stone-500 text-[11px]">台灣本島宅配與超取</span>
                     </div>
                 </div>
             </div>
