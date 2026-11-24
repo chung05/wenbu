@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【穩步寬頭運動鞋】寬頭不擠腳 × 免綁一拉即穿</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f6f4f0;
+            color: #292524;
+        }
+        /* 自動裁切手機螢幕截圖上下狀態列與購物車按鈕 */
+        .crop-mobile-ui {
+            object-fit: cover;
+            object-position: center 54%;
+            transform: scale(1.18);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-teal-600 selection:text-white">
+
+    <!-- 頂部導覽列（乾淨審核版，無任何浮動干擾元件） -->
+    <header class="bg-white/95 backdrop-blur border-b border-stone-200 sticky top-0 z-30">
+        <div class="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <span class="bg-teal-700 text-white text-xs font-black px-2.5 py-1 rounded-md tracking-wider">提案介紹</span>
+                <span class="font-bold text-stone-800 text-sm sm:text-base">穩步寬頭運動鞋</span>
+            </div>
+            <label id="photo-sync-btn" class="cursor-pointer text-xs text-stone-400 hover:text-teal-700 underline transition">
+                套用本機原圖檔
+                <input type="file" id="batch-upload" accept="image/*" multiple class="hidden">
+            </label>
+        </div>
+    </header>
+
+    <!-- 主內容容器（單欄響應式設計，手機與電腦閱讀皆清晰舒適） -->
+    <main class="max-w-3xl mx-auto px-4 py-6 sm:py-8 space-y-6">
+
+        <!-- ===================================================================
+             【區塊一】1920x1080 封面主視覺與精簡專案名稱
+             👉 對應圖檔名稱：main.jpg
+             =================================================================== -->
+        <section class="bg-white rounded-3xl shadow-sm border border-stone-200/80 overflow-hidden">
+            <div class="w-full aspect-video bg-stone-200 relative overflow-hidden">
+                <!-- [圖檔 1] 封面主視覺：main.jpg -->
+                <img id="img-cover" alt="穩步寬頭運動鞋封面主視覺" class="w-full h-full object-cover block">
+            </div>
+
+            <div class="p-5 sm:p-8">
+                <div class="flex flex-wrap items-center gap-2 text-xs text-stone-500 mb-2.5">
+                    <span class="bg-teal-50 text-teal-800 border border-teal-200 font-bold px-2.5 py-0.5 rounded-full">日常機能鞋履</span>
+                    <span>提案團隊：<strong>穩步生活設計團隊 SteadyWalk Lab</strong></span>
+                </div>
+                <!-- 精簡版主標題 -->
+                <h1 class="text-xl sm:text-2xl font-black text-stone-900 leading-snug mb-3">
+                    【穩步寬頭運動鞋】寬頭不擠腳 × 免綁一拉即穿
+                </h1>
+                <p class="text-sm sm:text-base text-stone-600 leading-relaxed">
+                    專為台灣偏寬腳型與久站生活打造！將<strong>「加寬透氣鞋頭」</strong>與<strong>「三層立體支撐鞋墊」</strong>結合，五根腳趾自由伸展、足弓穩穩有支撐，走一整天依然踏實輕鬆。
+                </p>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             【區塊二】解決四大穿鞋痛點（精簡短句卡片）
+             =================================================================== -->
+        <section class="bg-white rounded-3xl shadow-sm border border-stone-200/80 p-5 sm:p-8">
+            <h2 class="text-lg sm:text-xl font-black text-stone-900 mb-1">這雙鞋為你解決的 4 個日常煩惱</h2>
+            <p class="text-xs sm:text-sm text-stone-500 mb-5">針對台灣服務業、通勤族與銀髮長輩實際穿鞋需求設計</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                <div class="bg-[#faf8f5] p-4 rounded-2xl border border-stone-200/80 flex items-start gap-3">
+                    <span class="w-7 h-7 rounded-full bg-teal-700 text-white font-black text-xs flex items-center justify-center shrink-0 mt-0.5">1</span>
+                    <div>
+                        <h3 class="font-bold text-stone-900 text-sm sm:text-base mb-1">腳板偏寬、走久就磨腳</h3>
+                        <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">一般窄頭鞋走不到半小時，小拇指與腳掌兩側就被勒得又紅又痛。</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#faf8f5] p-4 rounded-2xl border border-stone-200/80 flex items-start gap-3">
+                    <span class="w-7 h-7 rounded-full bg-teal-700 text-white font-black text-xs flex items-center justify-center shrink-0 mt-0.5">2</span>
+                    <div>
+                        <h3 class="font-bold text-stone-900 text-sm sm:text-base mb-1">買大一號卻一直掉跟</h3>
+                        <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">為了讓腳趾舒服買大半號，結果走路後腳跟空蕩蕩、容易磨破皮。</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#faf8f5] p-4 rounded-2xl border border-stone-200/80 flex items-start gap-3">
+                    <span class="w-7 h-7 rounded-full bg-teal-700 text-white font-black text-xs flex items-center justify-center shrink-0 mt-0.5">3</span>
+                    <div>
+                        <h3 class="font-bold text-stone-900 text-sm sm:text-base mb-1">站一整天腳底又痠又麻</h3>
+                        <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">一般平底鞋踩久容易軟塌，缺乏足弓支撐導致腳底板壓力集中。</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#faf8f5] p-4 rounded-2xl border border-stone-200/80 flex items-start gap-3">
+                    <span class="w-7 h-7 rounded-full bg-teal-700 text-white font-black text-xs flex items-center justify-center shrink-0 mt-0.5">4</span>
+                    <div>
+                        <h3 class="font-bold text-stone-900 text-sm sm:text-base mb-1">出門趕時間不想彎腰綁鞋帶</h3>
+                        <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">手提重物或長輩彎腰不便，傳統鞋帶鬆脫也容易造成絆倒風險。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             【區塊三】四大核心工藝與實拍細節
+             👉 對應圖檔名稱：
+                - 設計 01（加寬鞋頭）：5B7D9F79-E144-4167-8E11-6BA5813DCA7B.jpg
+                - 設計 02（三層鞋墊）：F8AD509D-9748-4AC0-A8E7-A4F855C02B96.jpg
+                - 設計 02（足弓支撐）：5F9C63FE-DF02-45D9-A3B1-BB37AB097943.jpg
+                - 設計 03（後跟快調）：58BC86A1-BB4F-426A-940C-1F880256B158.jpg
+                - 設計 04（防滑大底）：7BD0C0F0-CCE4-41F4-9FF3-4194489E2562.jpg
+             =================================================================== -->
+        <section class="bg-white rounded-3xl shadow-sm border border-stone-200/80 p-5 sm:p-8 space-y-6">
+            <div>
+                <h2 class="text-lg sm:text-xl font-black text-stone-900 mb-1">四大好穿細節設計</h2>
+                <p class="text-xs sm:text-sm text-stone-500">從鞋頭寬度、足弓鞋墊到防滑大底，每處細節都為久走考量</p>
+            </div>
+
+            <!-- 設計 01：鞋頭加寬設計 -->
+            <div class="bg-[#faf8f5] p-4 sm:p-5 rounded-2xl border border-stone-200">
+                <div class="flex items-center gap-2 mb-1.5">
+                    <span class="bg-teal-700 text-white text-xs font-black px-2 py-0.5 rounded">01</span>
+                    <h3 class="font-black text-base sm:text-lg text-stone-900">鞋頭加寬設計，五根腳趾自由伸展</h3>
+                </div>
+                <p class="text-xs sm:text-sm text-stone-600 mb-3.5">
+                    專為亞洲寬腳型加大前掌透氣空間，不擠壓腳趾；下午雙腳微腫或搭配厚襪依然寬鬆自在。
+                </p>
+                <div class="h-64 sm:h-72 rounded-xl overflow-hidden border border-stone-200 bg-white relative">
+                    <!-- [圖檔 2] 加寬鞋頭：5B7D9F79-E144-4167-8E11-6BA5813DCA7B.jpg -->
+                    <img id="img-widetoe" alt="加寬鞋頭設計與寬頭鞋墊對比圖" class="w-full h-full object-cover block">
+                </div>
+            </div>
+
+            <!-- 設計 02：三層立體支撐鞋墊 -->
+            <div class="bg-[#faf8f5] p-4 sm:p-5 rounded-2xl border border-stone-200">
+                <div class="flex items-center gap-2 mb-1.5">
+                    <span class="bg-amber-500 text-stone-900 text-xs font-black px-2 py-0.5 rounded">02</span>
+                    <h3 class="font-black text-base sm:text-lg text-stone-900">每雙配置「三層立體支撐鞋墊」</h3>
+                </div>
+                <p class="text-xs sm:text-sm text-stone-600 mb-3.5">
+                    透氣緩衝 PU 上層 ＋ 硬挺 TPU 足弓支撐片 ＋ 前後避震 GEL 矽膠，分散足底壓力、久站不累。
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                    <div class="h-64 rounded-xl overflow-hidden border border-stone-200 bg-white relative">
+                        <!-- [圖檔 3] 三層鞋墊分解：F8AD509D-9748-4AC0-A8E7-A4F855C02B96.jpg -->
+                        <img id="img-insole-layers" alt="PU+GEL+TPU 三層支撐鞋墊結構分解圖" class="w-full h-full object-cover block">
+                    </div>
+                    <div class="h-64 rounded-xl overflow-hidden border border-stone-200 bg-white relative">
+                        <!-- [圖檔 4] 足弓支撐力學：5F9C63FE-DF02-45D9-A3B1-BB37AB097943.jpg -->
+                        <img id="img-insole-arch" alt="足弓 A-B-C 三點立體支撐示意圖" class="w-full h-full object-cover block">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 設計 03 & 04：加厚緩震後跟免綁扣 × 超輕耐磨防滑大底 -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="bg-[#faf8f5] p-4 rounded-2xl border border-stone-200">
+                    <div class="flex items-center gap-2 mb-1">
+                        <span class="bg-stone-800 text-white text-xs font-black px-2 py-0.5 rounded">03</span>
+                        <h3 class="font-black text-sm sm:text-base text-stone-900">加厚緩震後跟 × 免綁快調扣</h3>
+                    </div>
+                    <p class="text-xs text-stone-600 mb-3">U 型跟杯柔軟包覆腳踝不掉跟，彈性鞋帶一拉即穿。</p>
+                    <div class="h-60 rounded-xl overflow-hidden border border-stone-200 bg-white relative">
+                        <!-- [圖檔 5] 後跟快調扣：58BC86A1-BB4F-426A-940C-1F880256B158.jpg -->
+                        <img id="img-lace" alt="加厚緩震後跟與免綁快調扣特寫" class="w-full h-full object-cover block">
+                    </div>
+                </div>
+
+                <div class="bg-[#faf8f5] p-4 rounded-2xl border border-stone-200">
+                    <div class="flex items-center gap-2 mb-1">
+                        <span class="bg-stone-800 text-white text-xs font-black px-2 py-0.5 rounded">04</span>
+                        <h3 class="font-black text-sm sm:text-base text-stone-900">超輕耐磨多紋路防滑大底</h3>
+                    </div>
+                    <p class="text-xs text-stone-600 mb-3">前後掌高耐磨橡膠片加強抓地力，日常濕滑路面更安心。</p>
+                    <div class="h-60 rounded-xl overflow-hidden border border-stone-200 bg-white relative">
+                        <!-- [圖檔 6] 防滑大底：7BD0C0F0-CCE4-41F4-9FF3-4194489E2562.jpg -->
+                        <img id="img-heel" alt="超輕耐磨防滑大底特寫" class="w-full h-full object-cover block">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             【區塊四】五種百搭配色與尺碼規格
+             👉 對應圖檔名稱：
+                - 極簡黑：image_92a102.jpg
+                - 質感灰：image_3d553a.jpg
+                - 典雅棗紅：image_f56ba8.jpg
+                - 櫻花粉紅：image_a59a1a.jpg
+                - 尊爵紫：image_d037b8.jpg
+             =================================================================== -->
+        <section class="bg-white rounded-3xl shadow-sm border border-stone-200/80 p-5 sm:p-8">
+            <h2 class="text-lg sm:text-xl font-black text-stone-900 mb-1">全系列五種百搭配色</h2>
+            <p class="text-xs sm:text-sm text-stone-500 mb-5">提供男、女完整尺碼選擇，滿足上班通勤、休閒散步與孝親送禮</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- 1. 極簡黑 -->
+                <div class="bg-[#faf8f5] rounded-2xl border border-stone-200 overflow-hidden">
+                    <div class="aspect-square bg-white overflow-hidden">
+                        <!-- [圖檔 7] 極簡黑：image_92a102.jpg -->
+                        <img id="img-shoe-black" alt="極簡黑款式實拍" class="w-full h-full object-cover block">
+                    </div>
+                    <div class="p-3.5">
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="font-black text-stone-900 text-sm">極簡黑</span>
+                            <span class="text-[11px] bg-stone-200 text-stone-700 font-bold px-2 py-0.5 rounded">36 - 46 碼</span>
+                        </div>
+                        <p class="text-xs text-stone-500">免綁帶快調扣｜耐髒百搭首選</p>
+                    </div>
+                </div>
+
+                <!-- 2. 質感灰 -->
+                <div class="bg-[#faf8f5] rounded-2xl border border-stone-200 overflow-hidden">
+                    <div class="aspect-square bg-white overflow-hidden">
+                        <!-- [圖檔 8] 質感灰：image_3d553a.jpg -->
+                        <img id="img-shoe-grey" alt="質感灰款式實拍" class="w-full h-full object-cover block">
+                    </div>
+                    <div class="p-3.5">
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="font-black text-stone-900 text-sm">質感灰</span>
+                            <span class="text-[11px] bg-stone-200 text-stone-700 font-bold px-2 py-0.5 rounded">36 - 46 碼</span>
+                        </div>
+                        <p class="text-xs text-stone-500">免綁帶快調扣｜休閒俐落質感</p>
+                    </div>
+                </div>
+
+                <!-- 3. 典雅棗紅 -->
+                <div class="bg-[#faf8f5] rounded-2xl border border-stone-200 overflow-hidden">
+                    <div class="aspect-square bg-white overflow-hidden">
+                        <!-- [圖檔 9] 典雅棗紅：image_f56ba8.jpg -->
+                        <img id="img-shoe-burgundy" alt="典雅棗紅款式實拍" class="w-full h-full object-cover block">
+                    </div>
+                    <div class="p-3.5">
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="font-black text-stone-900 text-sm">典雅棗紅</span>
+                            <span class="text-[11px] bg-rose-100 text-rose-800 font-bold px-2 py-0.5 rounded">36 - 42 碼</span>
+                        </div>
+                        <p class="text-xs text-stone-500">免綁帶快調扣｜低調襯膚顯白</p>
+                    </div>
+                </div>
+
+                <!-- 4. 櫻花粉紅 -->
+                <div class="bg-[#faf8f5] rounded-2xl border border-stone-200 overflow-hidden">
+                    <div class="aspect-square bg-white overflow-hidden">
+                        <!-- [圖檔 10] 櫻花粉紅：image_a59a1a.jpg -->
+                        <img id="img-shoe-pink" alt="櫻花粉紅款式實拍" class="w-full h-full object-cover block">
+                    </div>
+                    <div class="p-3.5">
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="font-black text-stone-900 text-sm">櫻花粉紅</span>
+                            <span class="text-[11px] bg-purple-100 text-purple-800 font-bold px-2 py-0.5 rounded">36 - 42 碼</span>
+                        </div>
+                        <p class="text-xs text-stone-500">免綁帶快調扣｜清新粉紫丁香</p>
+                    </div>
+                </div>
+
+                <!-- 5. 尊爵紫 -->
+                <div class="bg-[#faf8f5] rounded-2xl border border-stone-200 overflow-hidden sm:col-span-2 lg:col-span-2">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 h-full">
+                        <div class="aspect-square sm:aspect-auto bg-white overflow-hidden">
+                            <!-- [圖檔 11] 尊爵紫：image_d037b8.jpg -->
+                            <img id="img-shoe-purple" alt="尊爵紫款式實拍" class="w-full h-full object-cover block">
+                        </div>
+                        <div class="p-4 flex flex-col justify-center">
+                            <div class="flex items-center gap-2 mb-1.5">
+                                <span class="font-black text-stone-900 text-base">尊爵紫（經典扁平鞋帶款）</span>
+                                <span class="text-[11px] bg-fuchsia-100 text-fuchsia-800 font-bold px-2 py-0.5 rounded">36 - 42 碼</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+                                採用黑紫雙色立體交織網布，搭配流線銀標與經典編織扁平鞋帶，包覆感更紮實穩固。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             【區塊五】專案計畫（計畫故事、執行時程與售後承諾）
+             =================================================================== -->
+        <section class="bg-white rounded-3xl shadow-sm border border-stone-200/80 p-5 sm:p-8 space-y-6">
+            <div>
+                <h2 class="text-lg sm:text-xl font-black text-stone-900 mb-2">計畫故事與專案時程</h2>
+                <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+                    我們在訪談超過 200 位台灣服務業夥伴、護理人員與銀髮長輩後發現，大家選鞋最常陷入兩難：一般運動鞋鞋頭太窄容易擠腳趾，而市面上的寬頭鞋往往鞋底太軟、久站足弓容易痠麻。因此我們決定將「加寬透氣鞋頭」與「三層立體支撐鞋墊」合而為一，打造出每天出門都踩得穩固輕鬆的日常鞋履。
+                </p>
+            </div>
+
+            <!-- 執行時程表 -->
+            <div class="bg-[#faf8f5] p-4 sm:p-5 rounded-2xl border border-stone-200">
+                <h3 class="font-bold text-stone-900 text-sm sm:text-base mb-3">專案執行與出貨時程</h3>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+                    <div class="bg-white p-3 rounded-xl border border-stone-200/80">
+                        <span class="text-teal-700 font-black block mb-1">2026 / 11 月</span>
+                        <span class="font-bold text-stone-800 block">全尺碼打樣實測</span>
+                        <span class="text-stone-500 text-[11px]">鞋頭寬度與鞋墊定案</span>
+                    </div>
+                    <div class="bg-white p-3 rounded-xl border border-stone-200/80">
+                        <span class="text-teal-700 font-black block mb-1">2026 / 12 月</span>
+                        <span class="font-bold text-stone-800 block">嘖嘖募資啟動</span>
+                        <span class="text-stone-500 text-[11px]">開放預購與尺碼統計</span>
+                    </div>
+                    <div class="bg-white p-3 rounded-xl border border-stone-200/80">
+                        <span class="text-teal-700 font-black block mb-1">2027 / 01 月</span>
+                        <span class="font-bold text-stone-800 block">正式量產與品管</span>
+                        <span class="text-stone-500 text-[11px]">人工逐雙檢驗鞋身鞋墊</span>
+                    </div>
+                    <div class="bg-white p-3 rounded-xl border border-stone-200/80">
+                        <span class="text-teal-700 font-black block mb-1">2027 / 02 月起</span>
+                        <span class="font-bold text-stone-800 block">依訂單陸續出貨</span>
+                        <span class="text-stone-500 text-[11px]">台灣本島宅配與超取</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 售後承諾 -->
+            <div class="flex items-center gap-3 bg-teal-50/80 border border-teal-200 p-4 rounded-2xl text-xs sm:text-sm text-teal-950">
+                <span class="text-xl">🛡️</span>
+                <div>
+                    <strong>台灣在地售後保障：</strong>收到商品 7 天內（保持鞋底乾淨、未落地外出使用），享<strong>免費更換尺寸一次</strong>，網路預購更安心。
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center text-xs text-stone-400 py-8">
+        穩步生活設計團隊 SteadyWalk Lab｜產品提案審核專用預覽頁
+    </footer>
+
+    <script>
+        /* =====================================================================
+         * 【圖檔名稱設定集中管理區】
+         * 如果你要更換自己的圖片，只要直接修改下方 `file: '你的新檔名.jpg'` 即可！
+         * 若需要自動裁切掉手機截圖上下邊緣的購物車按鈕，將 `crop` 設為 `true`；
+         * 若為乾淨無邊框的正式照片，請將 `crop` 設為 `false`。
+         * ===================================================================== */
+        const IMAGE_CONFIG = [
+            { id: 'img-cover',         file: 'main.jpg',                                      crop: false, desc: '1. 封面主視覺 (1920x1080)' },
+            { id: 'img-widetoe',       file: '5B7D9F79-E144-4167-8E11-6BA5813DCA7B.jpg',      crop: true,  desc: '2. 設計01-加寬鞋頭對比圖' },
+            { id: 'img-insole-layers', file: 'F8AD509D-9748-4AC0-A8E7-A4F855C02B96.jpg',      crop: true,  desc: '3. 設計02-三層鞋墊分解圖' },
+            { id: 'img-insole-arch',   file: '5F9C63FE-DF02-45D9-A3B1-BB37AB097943.jpg',      crop: true,  desc: '4. 設計02-足弓三點支撐圖' },
+            { id: 'img-lace',          file: '58BC86A1-BB4F-426A-940C-1F880256B158.jpg',      crop: true,  desc: '5. 設計03-後跟與快調扣圖' },
+            { id: 'img-heel',          file: '7BD0C0F0-CCE4-41F4-9FF3-4194489E2562.jpg',      crop: true,  desc: '6. 設計04-超輕耐磨大底圖' },
+            { id: 'img-shoe-black',    file: 'image_92a102.jpg',                              crop: false, desc: '7. 款式色票-極簡黑' },
+            { id: 'img-shoe-grey',     file: 'image_3d553a.jpg',                              crop: false, desc: '8. 款式色票-質感灰' },
+            { id: 'img-shoe-burgundy', file: 'image_f56ba8.jpg',                              crop: false, desc: '9. 款式色票-典雅棗紅' },
+            { id: 'img-shoe-pink',     file: 'image_a59a1a.jpg',                              crop: false, desc: '10. 款式色票-櫻花粉紅' },
+            { id: 'img-shoe-purple',   file: 'image_d037b8.jpg',                              crop: false, desc: '11. 款式色票-尊爵紫' }
+        ];
+
+        // 繪製圓角矩形輔助函式
+        function roundRect(ctx, x, y, w, h, r) {
+            ctx.beginPath();
+            ctx.moveTo(x + r, y);
+            ctx.arcTo(x + w, y, x + w, y + h, r);
+            ctx.arcTo(x + w, y + h, x, y + h, r);
+            ctx.arcTo(x, y + h, x, y, r);
+            ctx.arcTo(x, y, x + w, y, r);
+            ctx.closePath();
+        }
+
+        // 備援渲染 1：16:9 陽光木棧道封面主視覺（無外部圖檔時自動啟用）
+        function renderCoverPhoto() {
+            const img = document.getElementById('img-cover');
+            if (!img) return;
+            const c = document.createElement('canvas');
+            c.width = 1280; c.height = 720;
+            const ctx = c.getContext('2d');
+
+            const bg = ctx.createLinearGradient(0, 0, 1280, 720);
+            bg.addColorStop(0, '#5a7d4c');
+            bg.addColorStop(0.45, '#a8c28c');
+            bg.addColorStop(0.55, '#f4f1ea');
+            bg.addColorStop(1, '#e7e0d2');
+            ctx.fillStyle = bg;
+            ctx.fillRect(0, 0, 1280, 720);
+
+            for (let i = 0; i < 18; i++) {
+                ctx.fillStyle = i % 2 === 0 ? 'rgba(65, 102, 49, 0.45)' : 'rgba(255, 248, 214, 0.35)';
+                ctx.beginPath();
+                ctx.arc(80 + (i * 37) % 460, 40 + (i * 53) % 340, 45 + (i % 4) * 22, 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            ctx.fillStyle = '#9c7c5c';
+            ctx.beginPath();
+            ctx.moveTo(0, 560); ctx.lineTo(1280, 420); ctx.lineTo(1280, 720); ctx.lineTo(0, 720);
+            ctx.closePath();
+            ctx.fill();
+
+            ctx.strokeStyle = 'rgba(62, 43, 26, 0.35)';
+            ctx.lineWidth = 3;
+            for (let i = 0; i < 14; i++) {
+                ctx.beginPath();
+                ctx.moveTo(0, 565 + i * 24);
+                ctx.lineTo(1280, 425 + i * 32);
+                ctx.stroke();
+            }
+
+            const rightGlow = ctx.createRadialGradient(860, 220, 40, 860, 220, 440);
+            rightGlow.addColorStop(0, 'rgba(255,255,255,0.95)');
+            rightGlow.addColorStop(1, 'rgba(255,255,255,0)');
+            ctx.fillStyle = rightGlow;
+            ctx.fillRect(420, 0, 860, 480);
+
+            // 男生穿搭（極簡黑）
+            ctx.fillStyle = '#f3eee4'; roundRect(ctx, 215, 225, 86, 145, 24); ctx.fill();
+            ctx.fillStyle = '#6f7357'; roundRect(ctx, 222, 365, 34, 175, 10); ctx.fill();
+            roundRect(ctx, 262, 365, 34, 175, 10); ctx.fill();
+            ctx.fillStyle = '#e5b89b'; ctx.beginPath(); ctx.arc(258, 185, 28, 0, Math.PI * 2); ctx.fill();
+            ctx.fillStyle = '#1c1917'; ctx.beginPath(); ctx.arc(256, 178, 28, Math.PI, Math.PI * 2.15); ctx.fill();
+            ctx.fillStyle = '#18181b'; roundRect(ctx, 195, 532, 62, 24, 10); ctx.fill();
+            ctx.fillStyle = '#ffffff'; roundRect(ctx, 195, 550, 62, 8, 4); ctx.fill();
+            ctx.fillStyle = '#18181b'; roundRect(ctx, 255, 542, 62, 24, 10); ctx.fill();
+            ctx.fillStyle = '#ffffff'; roundRect(ctx, 255, 560, 62, 8, 4); ctx.fill();
+
+            // 女生穿搭（櫻花粉紫）
+            ctx.fillStyle = '#e3a5b0'; roundRect(ctx, 330, 245, 76, 130, 22); ctx.fill();
+            ctx.fillStyle = '#ebe3d3'; roundRect(ctx, 336, 370, 30, 155, 10); ctx.fill();
+            roundRect(ctx, 370, 370, 30, 155, 10); ctx.fill();
+            ctx.fillStyle = '#ecc3a8'; ctx.beginPath(); ctx.arc(366, 206, 25, 0, Math.PI * 2); ctx.fill();
+            ctx.fillStyle = '#3b2820'; ctx.beginPath(); ctx.arc(366, 202, 27, Math.PI * 0.85, Math.PI * 2.25); ctx.fill();
+            ctx.fillStyle = '#c4a1d6'; roundRect(ctx, 316, 518, 54, 21, 9); ctx.fill();
+            ctx.fillStyle = '#ffffff'; roundRect(ctx, 316, 534, 54, 7, 3); ctx.fill();
+            ctx.fillStyle = '#c4a1d6'; roundRect(ctx, 370, 526, 54, 21, 9); ctx.fill();
+            ctx.fillStyle = '#ffffff'; roundRect(ctx, 370, 542, 54, 7, 3); ctx.fill();
+
+            // 右下方質感灰雙鞋
+            drawRealisticShoeSide(ctx, 730, 355, 0.82, { main: '#525866', dark: '#333842', light: '#94a3b8', accent: '#64748b' });
+            drawRealisticShoeSide(ctx, 810, 415, 0.92, { main: '#525866', dark: '#333842', light: '#94a3b8', accent: '#64748b' });
+
+            ctx.textAlign = 'center';
+            ctx.font = '900 58px "Noto Sans TC", sans-serif';
+            ctx.fillStyle = '#1e4e68';
+            ctx.fillText('【 穩步寬頭運動鞋 】', 865, 145);
+
+            ctx.font = '900 34px "Noto Sans TC", sans-serif';
+            ctx.fillStyle = '#1c1917';
+            ctx.fillText('鞋頭加寬不擠腳 × 免綁鞋帶一拉就緊', 865, 210);
+
+            ctx.font = '700 24px "Noto Sans TC", sans-serif';
+            ctx.fillStyle = '#44403c';
+            ctx.fillText('全天候足弓支撐，走一整天腳底依然穩固輕鬆！', 865, 262);
+
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.94)';
+            roundRect(ctx, 36, 632, 480, 54, 27);
+            ctx.fill();
+            ctx.fillStyle = '#1c1917';
+            ctx.font = '900 24px "Noto Sans TC", sans-serif';
+            ctx.fillText('三層支撐鞋墊｜軟彈、防滑、穩固', 276, 667);
+
+            img.src = c.toDataURL('image/jpeg', 0.92);
+        }
+
+        function drawRealisticShoeSide(ctx, x, y, scale, palette) {
+            ctx.save();
+            ctx.translate(x, y);
+            ctx.scale(scale, scale);
+
+            ctx.fillStyle = 'rgba(0,0,0,0.32)';
+            ctx.beginPath(); ctx.ellipse(215, 225, 215, 22, 0, 0, Math.PI * 2); ctx.fill();
+
+            const soleGrad = ctx.createLinearGradient(0, 150, 0, 220);
+            soleGrad.addColorStop(0, '#ffffff'); soleGrad.addColorStop(1, '#e4e4e7');
+            ctx.fillStyle = soleGrad;
+            ctx.beginPath();
+            ctx.moveTo(15, 165); ctx.quadraticCurveTo(210, 185, 415, 165);
+            ctx.quadraticCurveTo(432, 195, 405, 215); ctx.quadraticCurveTo(210, 228, 22, 206);
+            ctx.quadraticCurveTo(5, 185, 15, 165); ctx.fill();
+
+            ctx.strokeStyle = '#cbd5e1'; ctx.lineWidth = 2.5;
+            for (let i = 0; i < 14; i++) {
+                ctx.beginPath(); ctx.moveTo(45 + i * 24, 182); ctx.lineTo(35 + i * 24, 206); ctx.stroke();
+            }
+
+            const upperGrad = ctx.createLinearGradient(0, 40, 400, 180);
+            upperGrad.addColorStop(0, palette.dark); upperGrad.addColorStop(0.5, palette.main); upperGrad.addColorStop(1, palette.light);
+            ctx.fillStyle = upperGrad;
+            ctx.beginPath();
+            ctx.moveTo(22, 165); ctx.lineTo(34, 72); ctx.quadraticCurveTo(75, 105, 130, 75);
+            ctx.lineTo(185, 48); ctx.quadraticCurveTo(295, 108, 408, 135);
+            ctx.quadraticCurveTo(422, 152, 412, 168); ctx.quadraticCurveTo(210, 186, 22, 165); ctx.fill();
+
+            ctx.fillStyle = 'rgba(255,255,255,0.12)';
+            for (let px = 45; px < 390; px += 8) {
+                for (let py = 85; py < 162; py += 7) { ctx.fillRect(px, py, 2.5, 2.5); }
+            }
+
+            ctx.strokeStyle = palette.dark; ctx.lineWidth = 4;
+            for (let w = 0; w < 3; w++) {
+                ctx.beginPath(); ctx.moveTo(85 + w * 24, 168);
+                ctx.quadraticCurveTo(165 + w * 24, 112, 260 + w * 20, 174); ctx.stroke();
+            }
+
+            ctx.fillStyle = palette.accent;
+            ctx.beginPath(); ctx.moveTo(45, 92); ctx.quadraticCurveTo(95, 138, 195, 114);
+            ctx.quadraticCurveTo(100, 124, 52, 82); ctx.fill();
+
+            ctx.strokeStyle = palette.light; ctx.lineWidth = 4;
+            for (let l = 0; l < 4; l++) {
+                ctx.beginPath(); ctx.moveTo(185 + l * 22, 62 + l * 14); ctx.lineTo(205 + l * 22, 82 + l * 14); ctx.stroke();
+            }
+            ctx.fillStyle = '#18181b'; roundRect(ctx, 182, 44, 24, 16, 6); ctx.fill();
+            ctx.restore();
+        }
+
+        // 備援渲染 2：四大核心工藝結構圖
+        function renderFeaturePhotos() {
+            const c1 = document.createElement('canvas'); c1.width = 800; c1.height = 460;
+            const ctx1 = c1.getContext('2d');
+            const g1 = ctx1.createLinearGradient(0, 0, 0, 460); g1.addColorStop(0, '#dbeafe'); g1.addColorStop(1, '#f1f5f9');
+            ctx1.fillStyle = g1; ctx1.fillRect(0, 0, 800, 460);
+            ctx1.fillStyle = '#0f172a'; ctx1.font = '900 32px "Noto Sans TC", sans-serif'; ctx1.textAlign = 'center';
+            ctx1.fillText('加寬鞋頭空間 × 五趾自然伸展', 400, 56);
+            ctx1.fillStyle = '#475569'; roundRect(ctx1, 145, 125, 190, 310, 92); ctx1.fill();
+            ctx1.strokeStyle = '#ffffff'; ctx1.lineWidth = 5; roundRect(ctx1, 142, 122, 196, 316, 95); ctx1.stroke();
+            ctx1.strokeStyle = 'rgba(255,255,255,0.85)'; ctx1.lineWidth = 4;
+            [175, 203, 232, 260, 288].forEach((tx, idx) => { roundRect(ctx1, tx, 152 + Math.abs(2 - idx) * 6, 22, 48, 11); ctx1.stroke(); });
+            ctx1.strokeStyle = '#0f766e'; ctx1.lineWidth = 3; ctx1.beginPath(); ctx1.moveTo(140, 102); ctx1.lineTo(340, 102); ctx1.stroke();
+            ctx1.fillStyle = '#0f766e'; ctx1.font = '900 18px "Noto Sans TC", sans-serif'; ctx1.fillText('← 加寬鞋頭空間 →', 240, 94);
+            ctx1.fillStyle = '#292524'; roundRect(ctx1, 455, 130, 185, 305, 88); ctx1.fill();
+            ctx1.strokeStyle = '#84cc16'; ctx1.lineWidth = 4; ctx1.beginPath(); ctx1.moveTo(455, 235); ctx1.lineTo(640, 235); ctx1.stroke();
+            ctx1.fillStyle = '#facc15'; roundRect(ctx1, 480, 248, 135, 34, 17); ctx1.fill();
+            ctx1.fillStyle = '#1c1917'; ctx1.font = '900 17px "Noto Sans TC", sans-serif'; ctx1.fillText('寬頭舒適鞋墊', 547, 271);
+            document.getElementById('img-widetoe').src = c1.toDataURL('image/jpeg', 0.92);
+
+            const c2 = document.createElement('canvas'); c2.width = 640; c2.height = 460;
+            const ctx2 = c2.getContext('2d');
+            ctx2.fillStyle = '#f1f5f9'; ctx2.fillRect(0, 0, 640, 460);
+            ctx2.fillStyle = '#0f172a'; ctx2.font = '900 26px "Noto Sans TC", sans-serif'; ctx2.textAlign = 'center';
+            ctx2.fillText('PU ＋ TPU ＋ GEL 三重立體結構', 320, 48);
+            ctx2.save(); ctx2.translate(180, 145); ctx2.rotate(-0.45);
+            ctx2.fillStyle = '#0ea5e9'; roundRect(ctx2, -130, -36, 270, 72, 36); ctx2.fill(); ctx2.restore();
+            ctx2.fillStyle = '#0369a1'; ctx2.font = '700 16px "Noto Sans TC", sans-serif'; ctx2.fillText('① 軟彈透氣 PU 上層', 135, 240);
+            ctx2.save(); ctx2.translate(380, 230); ctx2.rotate(-0.45);
+            ctx2.fillStyle = '#1e293b'; roundRect(ctx2, -110, -32, 220, 64, 32); ctx2.fill(); ctx2.restore();
+            ctx2.fillStyle = '#1e293b'; ctx2.fillText('② 足弓支撐 TPU 片', 175, 330);
+            ctx2.fillStyle = '#eab308'; roundRect(ctx2, 210, 360, 110, 48, 24); ctx2.fill(); roundRect(ctx2, 470, 245, 95, 44, 22); ctx2.fill();
+            ctx2.fillStyle = '#854d0e'; ctx2.fillText('③ GEL 減震防滑矽膠', 475, 355);
+            document.getElementById('img-insole-layers').src = c2.toDataURL('image/jpeg', 0.92);
+
+            const c3 = document.createElement('canvas'); c3.width = 640; c3.height = 460;
+            const ctx3 = c3.getContext('2d');
+            ctx3.fillStyle = '#f8fafc'; ctx3.fillRect(0, 0, 640, 460);
+            ctx3.fillStyle = '#0f172a'; ctx3.font = '900 26px "Noto Sans TC", sans-serif'; ctx3.textAlign = 'center';
+            ctx3.fillText('貼合足弓弧度・分散久站壓力', 320, 48);
+            ctx3.fillStyle = '#fed7aa'; ctx3.beginPath(); ctx3.moveTo(155, 110); ctx3.lineTo(155, 290);
+            ctx3.quadraticCurveTo(135, 345, 195, 345); ctx3.quadraticCurveTo(295, 315, 415, 348);
+            ctx3.quadraticCurveTo(525, 355, 535, 330); ctx3.quadraticCurveTo(445, 285, 285, 235); ctx3.lineTo(275, 110); ctx3.fill();
+            ctx3.fillStyle = '#0284c7'; ctx3.beginPath(); ctx3.moveTo(135, 342); ctx3.quadraticCurveTo(295, 305, 540, 345);
+            ctx3.lineTo(540, 362); ctx3.quadraticCurveTo(295, 332, 135, 362); ctx3.fill();
+            ctx3.fillStyle = '#1e293b'; ctx3.beginPath(); ctx3.moveTo(145, 358); ctx3.quadraticCurveTo(295, 326, 410, 356);
+            ctx3.lineTo(400, 376); ctx3.quadraticCurveTo(295, 355, 150, 376); ctx3.fill();
+            ctx3.strokeStyle = '#facc15'; ctx3.lineWidth = 6; ctx3.beginPath(); ctx3.moveTo(185, 312); ctx3.quadraticCurveTo(295, 275, 405, 315); ctx3.stroke();
+            [['A 腳跟包覆', 185, 312], ['B 足弓承托', 295, 285], ['C 前掌釋壓', 415, 315]].forEach(([txt, x, y]) => {
+                ctx3.fillStyle = '#ea580c'; ctx3.beginPath(); ctx3.arc(x, y, 13, 0, Math.PI * 2); ctx3.fill();
+                ctx3.fillStyle = '#ffffff'; ctx3.font = '900 13px sans-serif'; ctx3.fillText(txt[0], x, y + 4);
+            });
+            document.getElementById('img-insole-arch').src = c3.toDataURL('image/jpeg', 0.92);
+
+            const c4 = document.createElement('canvas'); c4.width = 640; c4.height = 440;
+            const ctx4 = c4.getContext('2d');
+            ctx4.fillStyle = '#e2e8f0'; ctx4.fillRect(0, 0, 640, 440);
+            drawRealisticShoeSide(ctx4, 40, 175, 1.35, { main: '#525866', dark: '#333842', light: '#94a3b8', accent: '#64748b' });
+            ctx4.save(); ctx4.beginPath(); ctx4.arc(465, 145, 105, 0, Math.PI * 2); ctx4.fillStyle = '#ffffff'; ctx4.fill();
+            ctx4.lineWidth = 6; ctx4.strokeStyle = '#0f766e'; ctx4.stroke(); ctx4.clip();
+            ctx4.fillStyle = '#475569'; ctx4.fillRect(360, 40, 210, 210);
+            ctx4.strokeStyle = '#cbd5e1'; ctx4.lineWidth = 10;
+            ctx4.beginPath(); ctx4.moveTo(380, 190); ctx4.lineTo(480, 115); ctx4.stroke();
+            ctx4.beginPath(); ctx4.moveTo(410, 220); ctx4.lineTo(510, 145); ctx4.stroke();
+            ctx4.fillStyle = '#09090b'; roundRect(ctx4, 445, 92, 46, 34, 14); ctx4.fill(); ctx4.restore();
+            ctx4.fillStyle = '#0f172a'; ctx4.font = '900 22px "Noto Sans TC", sans-serif'; ctx4.textAlign = 'left';
+            ctx4.fillText('免綁鞋帶一拉即緊', 42, 62); ctx4.fillText('U型加厚跟杯不掉跟', 42, 94);
+            document.getElementById('img-lace').src = c4.toDataURL('image/jpeg', 0.92);
+
+            const c5 = document.createElement('canvas'); c5.width = 640; c5.height = 440;
+            const ctx5 = c5.getContext('2d');
+            ctx5.fillStyle = '#e2e8f0'; ctx5.fillRect(0, 0, 640, 440);
+            ctx5.fillStyle = '#0f172a'; ctx5.font = '900 24px "Noto Sans TC", sans-serif'; ctx5.textAlign = 'center';
+            ctx5.fillText('前後掌高耐磨防滑橡膠大底', 320, 52);
+            ctx5.save(); ctx5.translate(320, 295); ctx5.rotate(-0.35);
+            ctx5.fillStyle = '#f8fafc'; roundRect(ctx5, -210, -95, 420, 190, 92); ctx5.fill();
+            ctx5.fillStyle = '#1e293b'; roundRect(ctx5, -195, -78, 145, 156, 68); ctx5.fill();
+            roundRect(ctx5, 65, -72, 130, 144, 62); ctx5.fill();
+            ctx5.strokeStyle = '#64748b'; ctx5.lineWidth = 3;
+            for (let gx = -175; gx < 180; gx += 26) { ctx5.beginPath(); ctx5.moveTo(gx, -65); ctx5.lineTo(gx, 65); ctx5.stroke(); }
+            ctx5.restore();
+            document.getElementById('img-heel').src = c5.toDataURL('image/jpeg', 0.92);
+        }
+
+        // 備援渲染 3：五種顏色雙鞋展示圖
+        function renderColorPairPhoto(imgId, palette) {
+            const img = document.getElementById(imgId);
+            if (!img) return;
+            const c = document.createElement('canvas'); c.width = 640; c.height = 640;
+            const ctx = c.getContext('2d');
+            const bg = ctx.createLinearGradient(0, 0, 0, 640); bg.addColorStop(0, '#e7dfd5'); bg.addColorStop(1, '#d6cbc0');
+            ctx.fillStyle = bg; ctx.fillRect(0, 0, 640, 640);
+            ctx.fillStyle = '#f8fafc'; roundRect(ctx, 145, 225, 350, 155, 12); ctx.fill();
+            ctx.save(); ctx.translate(320, 155);
+            ctx.fillStyle = '#ffffff'; roundRect(ctx, -215, -78, 430, 156, 78); ctx.fill();
+            ctx.fillStyle = palette.main; roundRect(ctx, -205, -70, 410, 140, 70); ctx.fill();
+            ctx.fillStyle = '#18181b'; roundRect(ctx, -172, -42, 135, 84, 42); ctx.fill();
+            ctx.strokeStyle = palette.light; ctx.lineWidth = palette.isPurple ? 7 : 4.5;
+            for (let i = 0; i < 5; i++) {
+                ctx.beginPath(); ctx.moveTo(-25 + i * 24, -46); ctx.lineTo(-10 + i * 24, 46); ctx.stroke();
+                ctx.beginPath(); ctx.moveTo(-10 + i * 24, -46); ctx.lineTo(-25 + i * 24, 46); ctx.stroke();
+            }
+            if (!palette.isPurple) { ctx.fillStyle = '#09090b'; roundRect(ctx, -35, -14, 24, 28, 7); ctx.fill(); }
+            ctx.restore();
+            drawRealisticShoeSide(ctx, 85, 315, 1.08, palette);
+            img.src = c.toDataURL('image/jpeg', 0.92);
+        }
+
+        // 頁面初始化執行
+        window.addEventListener('DOMContentLoaded', () => {
+            renderCoverPhoto();
+            renderFeaturePhotos();
+            renderColorPairPhoto('img-shoe-black',    { main: '#27272a', dark: '#09090b', light: '#71717a', accent: '#3f3f46', isPurple: false });
+            renderColorPairPhoto('img-shoe-grey',     { main: '#525866', dark: '#333842', light: '#94a3b8', accent: '#64748b', isPurple: false });
+            renderColorPairPhoto('img-shoe-burgundy', { main: '#6d1d2d', dark: '#450d18', light: '#a3485a', accent: '#88293b', isPurple: false });
+            renderColorPairPhoto('img-shoe-pink',     { main: '#c4a1d6', dark: '#8b66a1', light: '#ede0f5', accent: '#d8b4e8', isPurple: false });
+            renderColorPairPhoto('img-shoe-purple',   { main: '#6a2173', dark: '#3b0d42', light: '#b366bd', accent: '#e4e4e7', isPurple: true });
+
+            // 自動偵測同目錄下的真實圖檔並套用
+            IMAGE_CONFIG.forEach(item => {
+                const probe = new Image();
+                probe.onload = () => {
+                    const target = document.getElementById(item.id);
+                    if (target) {
+                        target.src = item.file;
+                        if (item.crop) target.classList.add('crop-mobile-ui');
+                    }
+                };
+                probe.src = item.file;
+            });
+
+            // 支援點擊頂部按鈕一鍵選取多個圖檔套用
+            const batchInput = document.getElementById('batch-upload');
+            if (batchInput) {
+                batchInput.addEventListener('change', (e) => {
+                    const files = Array.from(e.target.files || []);
+                    files.forEach(f => {
+                        const url = URL.createObjectURL(f);
+                        const name = f.name.toLowerCase();
+                        const matched = IMAGE_CONFIG.find(cfg => name === cfg.file.toLowerCase() || name.includes(cfg.file.split('.')[0].toLowerCase().slice(0, 6)));
+                        if (matched) {
+                            const el = document.getElementById(matched.id);
+                            if (el) {
+                                el.src = url;
+                                if (matched.crop) el.classList.add('crop-mobile-ui');
+                            }
+                        }
+                    });
+                    document.getElementById('photo-sync-btn').style.display = 'none';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
